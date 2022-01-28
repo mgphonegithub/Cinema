@@ -8,13 +8,13 @@ import java.io.Serializable;
 
 @Embeddable
 @Data
-public class MovieTheatreKey implements Serializable {
+public class MovieScreenKey implements Serializable {
 
     @Column(name = "movie_id")
     Long movieId;
 
-    @Column(name = "theatre_id")
-    Long theatreId;
+    @Column(name = "screen_id")
+    Long screenId;
 
     @Override
     public int hashCode() {

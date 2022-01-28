@@ -1,5 +1,6 @@
 package com.mingalar.movieticketing.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -24,6 +25,8 @@ public class Movies {
 
     private String description;
 
+    private String trailerUrl;
+
     private LocalDate toDate;
 
     private LocalDate fromDate;
@@ -35,8 +38,9 @@ public class Movies {
      */
     private String cast;
 
+//    @JsonIgnore
     @OneToMany(mappedBy = "movies")
-    private Set<MovieTheatre> tickets;
+    private Set<MovieScreen> tickets;
 
 
 }

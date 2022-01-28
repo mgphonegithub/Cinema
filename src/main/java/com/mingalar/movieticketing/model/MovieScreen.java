@@ -6,9 +6,9 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class MovieTheatre {
+public class MovieScreen {
     @EmbeddedId
-    MovieTheatreKey id;
+    MovieScreenKey id;
 
     @ManyToOne
     @MapsId("movieId")
@@ -16,10 +16,12 @@ public class MovieTheatre {
     private Movies movies;
 
     @ManyToOne
-    @MapsId("theatreId")
-    @JoinColumn(name = "theatre_id")
-    private Theatres theatres;
+    @MapsId("screenId")
+    @JoinColumn(name = "screen_id")
+    private Screens screens;
 
-    private Double ticketPrice;
+    private Double baseTicketPrice;
+
+    //can put seats here to be movie special
 
 }
