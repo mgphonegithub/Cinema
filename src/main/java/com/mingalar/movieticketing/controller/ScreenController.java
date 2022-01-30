@@ -1,7 +1,7 @@
 package com.mingalar.movieticketing.controller;
 
 import com.mingalar.movieticketing.payload.response.BaseResponse;
-import com.mingalar.movieticketing.service.ScreenService;
+import com.mingalar.movieticketing.service.implementations.ScreenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

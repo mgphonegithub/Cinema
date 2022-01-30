@@ -1,4 +1,4 @@
-package com.mingalar.movieticketing.service;
+package com.mingalar.movieticketing.service.implementations;
 
 import com.mingalar.movieticketing.model.Movies;
 import com.mingalar.movieticketing.payload.response.BaseResponse;
