@@ -16,6 +16,8 @@
     <properties>
         <java.version>11</java.version>
         <repackage.classifier/>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
         <spring-native.version>0.11.1</spring-native.version>
     </properties>
     <dependencies>
@@ -181,8 +183,6 @@
             <properties>
                 <repackage.classifier>exec</repackage.classifier>
                 <native-buildtools.version>0.9.9</native-buildtools.version>
-                <maven.compiler.target>17</maven.compiler.target>
-                <maven.compiler.source>17</maven.compiler.source>
             </properties>
             <dependencies>
                 <dependency>
