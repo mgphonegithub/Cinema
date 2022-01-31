@@ -8,8 +8,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-@Data
 @Entity
+@Data
 public class Movies {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
