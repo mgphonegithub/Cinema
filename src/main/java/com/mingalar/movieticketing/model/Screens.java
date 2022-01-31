@@ -1,8 +1,10 @@
 package com.mingalar.movieticketing.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -35,7 +37,10 @@ public class Screens {
 
     private Double totalSeats;
 
+    private String theatreName;
+
+    @JsonIgnore
     @OneToMany(mappedBy = "screens")
-    private Set<MovieScreen> tickets;
+    private List<MovieScreen> tickets;
 
 }

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(methods = {RequestMethod.DELETE, RequestMethod.PUT, RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS})
+@RequestMapping("/movies")
 public class MovieController {
 
     @Autowired
@@ -18,15 +19,20 @@ public class MovieController {
     @Autowired
     MovieService movieService;
 
-    @GetMapping("/movies")
+    @GetMapping
     public ResponseEntity<BaseResponse> getMovieList(){
         return movieService.getLists();
 
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<BaseResponse> getMovieDetails(){
-        return movieService.getLists();
+    public ResponseEntity<BaseResponse> getMovieDetails(@PathVariable Long id){
+        return movieService.getMovieDetails(id);
+    }
+
+    @GetMapping("/validrange/{id}")
+    public ResponseEntity<BaseResponse> getValidRange(@PathVariable Long id){
+        return movieService.getDateRange(id);
     }
 
     @PostMapping("/create")

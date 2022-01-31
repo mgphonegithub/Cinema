@@ -1,11 +1,15 @@
 package com.mingalar.movieticketing.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -27,10 +31,6 @@ public class Movies {
 
     private String trailerUrl;
 
-    private LocalDate toDate;
-
-    private LocalDate fromDate;
-
     private String type; //not genere
 
     /**
@@ -40,9 +40,10 @@ public class Movies {
      */
     private String cast;
 
-//    @JsonIgnore
+    @JsonIgnore
     @OneToMany(mappedBy = "movies")
-    private Set<MovieScreen> tickets;
+    @Fetch(value= FetchMode.SELECT)
+    private List<MovieScreen> tickets;
 
 
 }
