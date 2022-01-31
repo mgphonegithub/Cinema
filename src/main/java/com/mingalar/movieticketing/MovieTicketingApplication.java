@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class MovieTicketingApplication {
 
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         SpringApplication.run(MovieTicketingApplication.class, args);
 
 //        FirebaseOptions options = FirebaseOptions.builder()
