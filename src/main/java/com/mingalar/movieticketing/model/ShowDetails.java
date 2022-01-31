@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Data
 @Entity
-public class ShowTime {
+public class ShowDetails {
 
     @Id
     private Long showTimeId;
@@ -23,6 +23,10 @@ public class ShowTime {
     private String showTime;
 
     private LocalDate showDate;
+
+    private String takenSeats;
+
+
 
 
 

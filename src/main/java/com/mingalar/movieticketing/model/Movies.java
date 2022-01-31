@@ -31,6 +31,8 @@ public class Movies {
 
     private LocalDate fromDate;
 
+    private String type; //not genere
+
     /**
      * dr ka logic ko pyn sinn srr kyi pop
      * i dont think it it necessary like comma code pee pl cast ko htr loh ya dl but like

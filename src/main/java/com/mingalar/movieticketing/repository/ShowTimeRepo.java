@@ -1,7 +1,7 @@
 package com.mingalar.movieticketing.repository;
 
-import com.mingalar.movieticketing.model.ShowTime;
+import com.mingalar.movieticketing.model.ShowDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ShowTimeRepo extends JpaRepository<ShowTime,Long> {
+public interface ShowTimeRepo extends JpaRepository<ShowDetails,Long> {
 }
