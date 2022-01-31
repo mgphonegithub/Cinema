@@ -12,13 +12,13 @@ public class ShowDetails {
     @Id
     private Long showTimeId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "movieId")
-    private Movies movies;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "screenId")
-    private Screens screens;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "movieId")
+//    private Movies movies;
+//
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "screenId")
+//    private Screens screens;
 
     private String showTime;
 
