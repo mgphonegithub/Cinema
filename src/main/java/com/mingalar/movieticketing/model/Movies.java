@@ -41,8 +41,8 @@ public class Movies {
     private String cast;
 
 //    @JsonIgnore
-//    @OneToMany(mappedBy = "movies")
-//    private Set<MovieScreen> tickets;
+    @OneToMany(mappedBy = "movies")
+    private Set<MovieScreen> tickets;
 
 
 }

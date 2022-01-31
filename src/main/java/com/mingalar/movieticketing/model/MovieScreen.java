@@ -12,15 +12,15 @@ public class MovieScreen {
     @EmbeddedId
     MovieScreenKey id;
 
-//    @ManyToOne
-//    @MapsId("movieId")
-//    @JoinColumn(name = "movie_id")
-//    private Movies movies;
+    @ManyToOne
+    @MapsId("movieId")
+    @JoinColumn(name = "movie_id")
+    private Movies movies;
 
-//    @ManyToOne
-//    @MapsId("screenId")
-//    @JoinColumn(name = "screen_id")
-//    private Screens screens;
+    @ManyToOne
+    @MapsId("screenId")
+    @JoinColumn(name = "screen_id")
+    private Screens screens;
 
     private Double baseTicketPrice;
     private LocalDate startDate;

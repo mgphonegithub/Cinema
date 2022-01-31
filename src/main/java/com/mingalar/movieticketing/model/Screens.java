@@ -35,7 +35,7 @@ public class Screens {
 
     private Double totalSeats;
 
-//    @OneToMany(mappedBy = "screens")
-//    private Set<MovieScreen> tickets;
+    @OneToMany(mappedBy = "screens")
+    private Set<MovieScreen> tickets;
 
 }
