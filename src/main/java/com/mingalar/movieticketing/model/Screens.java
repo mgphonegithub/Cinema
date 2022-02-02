@@ -15,6 +15,10 @@ public class Screens {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long screenId;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "theatreId")
+    private Theatres theatres;
+
     private String screenDescription;
 
 //    private String covidSeats;

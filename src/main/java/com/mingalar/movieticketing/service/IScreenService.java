@@ -6,4 +6,5 @@ import org.springframework.http.ResponseEntity;
 
 public interface IScreenService {
     ResponseEntity<BaseResponse> getSeats(Long id);
+    ResponseEntity<BaseResponse> getTheatres();
 }
