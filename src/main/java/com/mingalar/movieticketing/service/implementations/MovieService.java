@@ -2,11 +2,13 @@ package com.mingalar.movieticketing.service.implementations;
 
 import com.mingalar.movieticketing.model.MovieScreen;
 import com.mingalar.movieticketing.model.Movies;
+import com.mingalar.movieticketing.model.ShowDetails;
 import com.mingalar.movieticketing.payload.response.BaseResponse;
 import com.mingalar.movieticketing.payload.response.ResponseFactory;
 import com.mingalar.movieticketing.payload.response.ValidRangeResponseModel;
 import com.mingalar.movieticketing.repository.MovieRepo;
 import com.mingalar.movieticketing.repository.MovieScreenRepo;
+import com.mingalar.movieticketing.repository.ShowDetailsRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,6 +29,9 @@ public class MovieService {
 
     @Autowired
     MovieScreenRepo movieScreenRepo;
+
+    @Autowired
+    ShowDetailsRepo showDetailsRepo;
 
     @Autowired
     ResponseFactory responseFactory;
@@ -53,8 +58,12 @@ public class MovieService {
 //        ValidRangeResponseModel validRangeResponseModel= new ValidRangeResponseModel();
 //        validRangeResponseModel.setEndDate(endDate);
 //        validRangeResponseModel.setStartDate(startDate);
-
         return responseFactory.buildSuccess(HttpStatus.OK,movieScreens,"Valid Date Range for the movie");
+    }
+
+    public ResponseEntity<BaseResponse> getShows(Long id){
+        List<ShowDetails> showDetails = showDetailsRepo.findShows(id);
+        return responseFactory.buildSuccess(HttpStatus.OK,showDetails,"Fetched Shows");
     }
 
 }

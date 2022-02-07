@@ -30,9 +30,14 @@ public class MovieController {
         return movieService.getMovieDetails(id);
     }
 
-    @GetMapping("/validrange/{id}")
-    public ResponseEntity<BaseResponse> getValidRange(@PathVariable Long id){
-        return movieService.getDateRange(id);
+    @GetMapping("/validrange/{MovieId}")
+    public ResponseEntity<BaseResponse> getValidRange(@PathVariable Long movieId){
+        return movieService.getDateRange(movieId);
+    }
+
+    @GetMapping("availableshows/{movieId}")
+    public ResponseEntity<BaseResponse> getShows(@PathVariable Long movieId){
+        return movieService.getShows(movieId);
     }
 
     @PostMapping("/create")
